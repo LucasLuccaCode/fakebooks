@@ -1,0 +1,27 @@
+.aside {
+  background: var(--secondary-color);
+  width: 15%;
+  padding: .5rem 0;
+}
+
+.aside ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.aside li a {
+  display: flex;
+  font-size: .9rem;
+  color: #9a9aa0;
+  padding: .5rem 0;
+  font-weight: bold;
+  padding-left: var(--margin-default);
+  transition: .3s ease;
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+.aside li a[aria-current],
+.aside li a:hover {
+  background: rgba(255, 255, 255, .05); 
+  color: #efefff;
+}
