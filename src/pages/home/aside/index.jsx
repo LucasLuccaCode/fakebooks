@@ -6,19 +6,22 @@ export default function HomeAside (){
     <aside className={styles.aside}>
       <ul>
         <li>
-          <NavLink to="dashboard">Dashboard</NavLink>
+          <NavLink to="dashboard">Painel de controle</NavLink>
         </li>
         <li>
-          <NavLink to="accounts">Accounts</NavLink>
+          <NavLink to="accounts">Contas</NavLink>
         </li>
         <li>
-          <NavLink to="sales">Sales</NavLink>
+          <NavLink to="sales">Vendas</NavLink>
         </li>
         <li>
-          <NavLink to="expenses">Expenses</NavLink>
+          <NavLink to="expenses">Despesas</NavLink>
         </li>
         <li>
-          <NavLink to="reports">Reports</NavLink>
+          <NavLink to="reports">Relatório</NavLink>
+        </li>
+        <li>
+          <NavLink to="store">Loja</NavLink>
         </li>
       </ul>
     </aside>

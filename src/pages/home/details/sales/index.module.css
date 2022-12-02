@@ -1,0 +1,35 @@
+.sales {
+  width: 100%;
+  height: 100%;
+}
+
+.sales nav {
+  margin-top: 1.2rem;
+  padding-bottom: .8rem;
+  border-bottom: 1.5px solid rgba(255, 255, 255, .1);
+}
+
+.sales nav ul {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  width: 100%;
+}
+
+.sales li a {
+  font-size: .85rem;
+  color: #9a9aa0;
+  transition: .3s ease;
+}
+
+.sales a:hover {
+  color: #efefff;
+}
+
+.sales a[aria-current] {
+  color: var(--details-color);
+}
+
+.detail {
+  padding: 1rem 0;
+}

@@ -1,6 +1,6 @@
 .aside {
   background: var(--secondary-color);
-  width: 15%;
+  width: 9rem;
   padding: .5rem 0;
 }
 
@@ -11,7 +11,7 @@
 
 .aside li a {
   display: flex;
-  font-size: .9rem;
+  font-size: .8rem;
   color: #9a9aa0;
   padding: .5rem 0;
   font-weight: bold;

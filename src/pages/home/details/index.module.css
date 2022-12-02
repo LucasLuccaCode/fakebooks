@@ -1,4 +1,16 @@
 .details {
   flex: 1;
-  padding: .5rem;
+  padding: 1rem 2rem;
+} 
+
+.details h1 {
+  font-size: 1.3rem;
+  color: #efefff;
+  font-family: serif;
+}
+
+.details h2 {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #efefff;
 }

@@ -1,0 +1,33 @@
+.see_book {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.see_book img {
+  height: 10rem;
+  max-width: 10rem;
+}
+
+.see_book  > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.see_book h2 {
+  font-size: 1rem;
+  color: var(--details-color);
+  font-weight: 800;
+}
+
+.see_book p {
+  font-size: .8rem;
+  color: #babac0;
+}
+
+.see_book strong {
+  margin-bottom: .5rem;
+  display: block;
+  min-width: 100%;
+}

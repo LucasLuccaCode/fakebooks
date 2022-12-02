@@ -1,0 +1,53 @@
+.books {
+  display: grid;
+  grid-template-columns: repeat(auto-filL, minmax(10rem, 1fr));
+  gap: .8rem;
+  margin-top: 1rem;
+}
+
+.books li {
+  display: flex;
+  flex-direction: column;
+  padding: .5rem;
+  background: var(--secondary-color);
+  border-radius: .3rem;
+}
+
+.books li > div {
+  flex: 1;
+  padding: .8rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.books li img {
+  width: 100%;
+}
+
+  .books li h3 {
+  font-size: .8rem;
+  color: var(--details-color);
+  margin-top: .5rem;
+  /* text-align: center; */
+}
+
+.books li p {
+  font-size: .76rem;
+  color: #babac0;
+}
+
+.books .btn {
+  width: 100%;
+}
+
+.books a {
+  text-align: center;
+}
+
+.next_books {
+  display: block;
+  margin: 0 auto;
+  width: 30%;
+  margin-top: 1rem;
+}
