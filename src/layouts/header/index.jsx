@@ -11,10 +11,10 @@ export default function Header(){
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/login">Entrar</Link>
+            <Link to="/auth/login">Entrar</Link>
           </li>
           <li>
-            <Link to="/register">Cadastrar</Link>
+            <Link to="/auth/register">Cadastrar</Link>
           </li>
         </ul>
       </nav>

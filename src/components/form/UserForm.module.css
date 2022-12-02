@@ -1,0 +1,36 @@
+.form {
+  width: 80%;
+  max-width: 400px;
+}
+
+.form div {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  margin-top: 1rem;
+}
+
+.form label {
+  color: #dadae0;
+  font-size: .8rem;
+}
+
+.form input {
+  border: none;
+  outline: none;
+  background: rgba(255 255 255 / 5%);
+  padding: .3rem .5rem;
+  color: #efefff;
+  font-size: .75rem;
+  border-radius: .2rem;
+  border: 2px solid transparent;
+}
+
+.form input:focus {
+  border: 2px solid var(--details-color)
+}
+
+.form button {
+  margin-top: 1rem;
+  width: 100%;
+}

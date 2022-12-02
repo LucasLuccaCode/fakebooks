@@ -20,6 +20,16 @@ import SeeBook from "./pages/home/store/SeeBook"
 // Home components
 import Sales from "./pages/home/details/sales"
 
+// Login components
+import Login, {
+  action as loginAction
+} from "./pages/login"
+
+// Register components
+import Register, {
+  action as registerAction
+} from "./pages/register"
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -91,12 +101,14 @@ const router = createBrowserRouter([
         ]
       },
       { 
-        path: "/login",
-        element: <h1>Login</h1>
+        path: "/auth/login",
+        element: <Login />,
+        action: loginAction
       },
       { 
-        path: "/register",
-        element: <h1>Register</h1>
+        path: "/auth/register",
+        element: <Register />,
+        action: registerAction
       }
     ]
   }
