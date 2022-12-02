@@ -1,17 +1,29 @@
-import { Link, useLoaderData } from "react-router-dom"
+import { useLoaderData } from "react-router-dom"
 import styles from "./Books.module.css"
 import { useState } from "react"
+import Book from "./Book"
+import EventButton from "../../../components/EventButton"
 
 export async function loader({ params }) {
   const res = await fetch(`../../../../books.json`)
   const books = await res.json()
-  const { bookId } = params
-  return bookId ? books[bookId - 1] : books
+
+  if(params.bookId){
+    const book = books.find( book => book._id === Number(params.bookId) )
+
+    if(!book) throw new Response("", {
+      status: 400,
+      statusText:"Este livro não existe"
+    })
+    return book
+  }
+  return books
 }
 
 export default function Books() {
-  const books = useLoaderData()
   const perPage = 12
+  
+  const books = useLoaderData()
   const [page, setPage] = useState(perPage)
 
   const nextPageBooks = () => {
@@ -24,22 +36,19 @@ export default function Books() {
 
   return (
     <>
+      <h1>Loja</h1>
+
       <ul className={styles.books}>
         {
-          currentPagesBook().map(book => (
-            <li key={book._id}>
-              <img src={book.thumbnailUrl} alt="" />
-              <h3>{book.title}</h3>
-              <div>
-                <p>{book.authors.join(", ")}</p>
-                <p><strong>Paginas:</strong> {book.pageCount}</p>
-              </div>
-              <Link className="btn" to={`${book._id}`}>Ver mais</Link>
-            </li>
-          ))
+          currentPagesBook().map(book => <Book book={book} key={book._id} />)
         }
       </ul>
-      <button className={`btn ${styles.next_books}`} onClick={nextPageBooks}>Mais livros</button>
+      
+      <EventButton
+        text="Mais livros"
+        event={nextPageBooks}
+        extraClass={styles.next_books}
+      />
     </>
   )
 }

@@ -4,10 +4,7 @@ import styles from "./index.module.css"
 export default function Store() {
   return (
     <div className={styles.store}>
-      <h1>Loja</h1>
-      <div className="detail">
-        <Outlet />
-      </div>
+      <Outlet />
     </div>
   )
 }

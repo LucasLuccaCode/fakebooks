@@ -5,7 +5,7 @@
   margin-top: 1rem;
 }
 
-.books li {
+.book {
   display: flex;
   flex-direction: column;
   padding: .5rem;
@@ -13,26 +13,25 @@
   border-radius: .3rem;
 }
 
-.books li > div {
+.book > div {
   flex: 1;
-  padding: .8rem 0;
+  padding: .5rem 0;
   display: flex;
   flex-direction: column;
   gap: .5rem;
 }
 
-.books li img {
+.book img {
   width: 100%;
 }
 
-  .books li h3 {
+.book h3 {
   font-size: .8rem;
   color: var(--details-color);
   margin-top: .5rem;
-  /* text-align: center; */
 }
 
-.books li p {
+.book p {
   font-size: .76rem;
   color: #babac0;
 }
